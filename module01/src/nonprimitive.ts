@@ -15,3 +15,24 @@ let couple:[string, string] = ['Husband', 'Wife']
 let mezbaNameAndRoll:[string, number] = ["Mezba", 79]
 
 let travel:[string, string, number] = ['Dhaka', 'chotogram', 3]
+
+
+// reference type: object
+
+const user:{
+    // organization: "Programing hero"; //value => type : literal type
+    readonly organization: "Programing hero"; //access modifier
+    firstName:string;
+    middleName?:string; //optional type
+    lastName:string;
+    isMarried: boolean;
+} = {
+    organization: "Programing hero", 
+    firstName: 'AShraf',
+    lastName: 'Tanjil',
+    isMarried: true,
+}
+
+
+
+console.log(user);
