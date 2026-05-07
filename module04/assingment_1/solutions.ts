@@ -21,7 +21,7 @@ function checkType(value: string | number) {
     if(typeof value == 'string') {
         return "String";
     }else if(typeof value == 'number') {
-        return 'Number';
+        return "Number";
     }
 }
 
