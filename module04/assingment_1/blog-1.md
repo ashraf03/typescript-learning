@@ -20,6 +20,7 @@ unknown safer from any:
 3. Works well with unpredictable data
 4. Keeps TypeScript protection active
 
-<!-- narrowing -->
+Narrowing
+ 
 TypeScript starts unsure, but after a check, it becomes certain about the exact type.
 
