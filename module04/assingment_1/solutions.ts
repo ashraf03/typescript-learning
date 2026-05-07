@@ -55,7 +55,7 @@ function toggleReadStatus(book: Book) {
 
 const myBook = { title: "TypeScript Guide", author: "Jane Doe", publishedYear: 2024 };
 
-console.log(toggleReadStatus(myBook));
+toggleReadStatus(myBook);
 
 // Problem 6
 class Person {
@@ -85,7 +85,7 @@ class Student extends Person {
 
 const student = new Student("Alice", 20, "A");
 
-console.log(student.getDetails());
+student.getDetails();
 
 // Problem 7
 function getIntersection(arr1:number[], arr2:number[]) {
