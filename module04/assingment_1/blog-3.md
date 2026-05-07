@@ -2,7 +2,7 @@ Generics:
 
 “Write once, reuse everywhere, still fully typed.”
 
-🔴 Problem without Generics
+Problem without Generics
 
 If you don’t use generics, you often end up doing this:
 

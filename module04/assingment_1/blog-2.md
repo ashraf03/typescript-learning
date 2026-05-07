@@ -47,4 +47,4 @@ Pick<User, "name" | "email">
 2. Simplified maintenance
 3. Safer refactoring
 4. Consistent types
-5. Cleaner codebase
+Cleaner codebase
