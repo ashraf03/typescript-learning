@@ -1,56 +1,109 @@
-type User = {
+// type User = {
+//     name: string;
+//     age: number;
+// } 
+
+// //interface: object type:array, objet, function
+
+
+// interface IUser {
+
+// }
+
+// type Role = {
+//     role: 'admin'|'user'
+// }
+
+// type UserWithRole = User & Role;
+
+// interface IUserWithRole extends IUser {
+//     role: 'admin' | 'user'; 
+// }
+
+// const user1: IUserWithRole = {
+//     name: 'Mr.x',
+//     age: 100,
+//     role: 'admin'
+// }
+
+// const user2: IUser = {
+//     name: 'Mr.x',
+//     age: 100,
+// }
+
+// type IsAdmin = boolean;
+
+// const isADmin: IsAdmin = false;
+
+
+// // function
+
+// type Add = (num1:number, num2:number) => number;
+
+// interface IAdd {
+//     (num1:number, num:number) : number
+// }
+// // const add: Add = (num1, num2) => num1 + num2; 
+
+// const add: IAdd = (num1, num2) => num1 + num2;
+
+// type Friends = string[];
+
+// const friends: string[] = ['A', 'C', 'D'];
+
+// interface IFriends {
+//     [index:number] : string
+// }
+
+
+// basic example 
+interface User {
     name: string;
     age: number;
-} 
-
-//interface: object type:array, objet, function
-
-
-interface IUser {
-
 }
 
-type Role = {
-    role: 'admin'|'user'
+const user1:User = {
+    name: "AShraf",
+    age: 34,
+};
+
+console.log(user1);
+
+
+// interface with function
+interface Person {
+    name: string;
+
+    greet(): string;
 }
 
-type UserWithRole = User & Role;
+const person:Person = {
+    name: 'Ashraf',
 
-interface IUserWithRole extends IUser {
-    role: 'admin' | 'user'; 
+    greet() {
+        return `Hello ${this.name}`;
+    }
 }
 
-const user1: IUserWithRole = {
-    name: 'Mr.x',
-    age: 100,
-    role: 'admin'
+// optional properties use ?
+
+interface UserI{
+    name:string;
+    age?:number;
 }
 
-const user2: IUser = {
-    name: 'Mr.x',
-    age: 100,
+
+// Readonly Property
+interface Car {
+    readonly brand: string;
 }
 
-type IsAdmin = boolean;
-
-const isADmin: IsAdmin = false;
-
-
-// function
-
-type Add = (num1:number, num2:number) => number;
-
-interface IAdd {
-    (num1:number, num:number) : number
+interface Animal {
+    sound(): void;
 }
-// const add: Add = (num1, num2) => num1 + num2; 
 
-const add: IAdd = (num1, num2) => num1 + num2;
-
-type Friends = string[];
-
-const friends: string[] = ['A', 'C', 'D'];
-
-interface IFriends {
-    [index:number] : string
+class Dog implements Animal {
+    sound(): void {
+        console.log("Bark");
+    }
 }
