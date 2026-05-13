@@ -59,4 +59,34 @@ const richDeveloper: Developer<AppleWatch> = {
 
 const add1 = (num1: number, num2: number = 0) => num1 + num2;
 
-add(2, 5)
+add1(2, 5)
+
+interface Data<T> { // T means: type will be decided later
+    value: T; 
+}
+
+const useName: Data<string> = {
+    value: "AShraf" //T = string
+}
+
+const userAge: Data<number> = {
+    value: 22 //T = number
+}
+
+interface ApiResponse<T> {
+    data: T;
+    success: boolean;
+}
+
+const response1:ApiResponse<string> = {
+    data: "Login successful",
+    success: true
+}
+
+// Using with object
+const response2: ApiResponse<{name: string}> = {
+    data: {
+        name: "Ashraf"
+    }, 
+    success: true
+}

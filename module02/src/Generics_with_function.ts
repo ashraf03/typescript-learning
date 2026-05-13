@@ -53,3 +53,29 @@ const student2 = {
 const result = addStudentToCourse(student1);
 
 console.log(result);
+
+
+// without generic
+
+// function getString(value: string):string{
+//     return value;
+// }
+
+// function getNumber(value:number):number {
+//     return value;
+// }
+// // 
+// function getValue<T>(value:T): T{
+//     return value;
+// }
+
+// getValue<number>(100);
+// getValue<string>("Ashraf");
+
+// // Generic Function with array
+// function getFirst<T>(arr:T[]): T {
+//     return arr[0];
+// }
+
+// getFirst<number>([1, 2, 4]);
+// getFirst<string>(["a", "b"]);
