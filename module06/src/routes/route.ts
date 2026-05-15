@@ -1,0 +1,20 @@
+import {IncomingMessage, ServerResponse } from "http";
+import { productControler } from "../controler/product.controller";
+
+export const routeHandler = (req: IncomingMessage, res: ServerResponse) => {
+    console.log(req.url); // '/', '/user', '/products'
+    console.log(req.method); // 'GET', 'POST', 'Delete'
+
+    const url = req.url
+    const method = req.method
+
+    if(url === '/' && method === "GET") {
+        res.writeHead(200, {"content-type": "application/json"});
+        res.end(JSON.stringify({messge: "This is root route"}));
+    } else if(url?.startsWith("/products")){
+       productControler(req ,res);
+    } else {
+        res.writeHead(404, {"content-type": "application/json"});
+        res.end(JSON.stringify({message: "Route is not found"}));
+    }
+    }
