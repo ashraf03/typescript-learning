@@ -6,9 +6,5 @@ app.use(express.json());
 app.use(express.text());
 app.use(express.urlencoded());
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
-
 
 export default app;

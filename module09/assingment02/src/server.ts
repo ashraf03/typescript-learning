@@ -8,6 +8,7 @@ import { userRoute } from "./modules/user/user.route";
 app.use("/api/auth", userRoute)
 app.use("/api/auth", authRoute)
 app.use("/api/issues", issueRoute)
+
 const main = () => {
   initDB();
 
