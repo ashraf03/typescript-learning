@@ -1,0 +1,93 @@
+🧾 Project Name
+B7A2
+
+🌐 Live URL
+
+https://assingment02-seven.vercel.app
+
+🚀 Features
+User authentication (JWT-based login system)
+Role-based access control (Contributor, Maintainer)
+Create, update, delete issues
+View all issues with filtering and sorting
+View single issue with reporter details
+Secure API with middleware authentication
+Centralized error handling
+Database connection pooling for performance
+
+🛠 Tech Stack
+Backend: Node.js, Express.js
+Language: TypeScript
+Database: PostgreSQL
+Authentication: JSON Web Token (JWT)
+Validation: Express Middleware
+Architecture: MVC + Modular Pattern
+Tools: pg (node-postgres), bcrypt, dotenv
+
+⚙️ Setup Instructions
+1. Clone the repository
+https://github.com/ashraf03/typescript-learning/new/main/module09/assingment02
+cd your-project
+2. Install dependencies
+npm install
+3. Setup environment variables
+
+Create a .env file:
+
+CONNECTIONSTRING= "postgresql://neondb_owner:npg_5Rath3bHekrS@ep-damp-resonance-aq1cd39k-pooler.c-8.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require"
+
+PORT=8000
+
+JWT_SECRET=asdfsfsdfdsffdh
+JWT_REFRESH_SECRET=asdfkldfd;afwe=kls
+
+4. Run database migration (if applicable)
+npm run db:init
+
+5. Start development server
+npm run dev
+📡 API Endpoints
+🔐 Auth
+POST /api/auth/login → User login
+📌 Issues
+POST /api/issues → Create issue (Contributor, Maintainer)
+GET /api/issues → Get all issues (public)
+GET /api/issues/:id → Get single issue (public)
+PATCH /api/issues/:id → Update issue
+DELETE /api/issues/:id → Delete issue (Maintainer only)
+
+🗄 Database Schema Summary
+Users Table
+id (Primary Key)
+name
+email
+password
+role (contributor | maintainer)
+created_at
+updated_at
+
+Issues Table
+id (Primary Key, Auto Increment)
+title (max 150 chars)
+description (min 20 chars)
+type (bug | feature_request)
+status (open | in_progress | resolved)
+reporter_id (references users.id logically)
+created_at
+updated_at
+
+📌 Notes
+
+Reporter details are fetched separately (no JOIN used)
+JWT payload includes: id, name, role
+Connection pooling is used for PostgreSQL efficiency
+Centralized error handling ensures consistent API responses
+
+🎯 Summary
+
+This project is a scalable backend Issue Tracking System built with Express and PostgreSQL, focusing on:
+
+Clean architecture
+Secure authentication
+Role-based authorization
+Efficient database handling
