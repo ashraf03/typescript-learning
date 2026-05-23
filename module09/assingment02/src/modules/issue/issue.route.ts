@@ -19,4 +19,4 @@ router.delete(
   issueController.deleteIssue
 );
 
-export default router;
+export const  issueRoute = router;
