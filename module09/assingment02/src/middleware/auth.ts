@@ -28,8 +28,8 @@ const auth = (...roles: string[]) => {
                     token,
                     config.secret as string
                 ) as any;
-
-                 const user = userData.rows[0]
+            
+            
             req.user = decoded;
 
             if (
