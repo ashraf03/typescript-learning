@@ -1,4 +1,4 @@
-import pool from "../db";
+import {pool} from "../../db";
 
 const createIssue = async (
   payload: {
@@ -79,7 +79,7 @@ const getAllIssues = async (query: any) => {
   const issues = issueResult.rows;
 
   // 6. Get reporter IDs
-  const reporterIds = [...new Set(issues.map((i) => i.reporter_id))];
+  const reporterIds = [...new Set(issues.map((i: { reporter_id: any; }) => i.reporter_id))];
 
   // 7. Fetch all reporters in ONE query (important optimization)
   const reporterResult = await pool.query(
@@ -88,12 +88,12 @@ const getAllIssues = async (query: any) => {
   );
 
   const reporterMap = new Map();
-  reporterResult.rows.forEach((user) => {
+  reporterResult.rows.forEach((user: { id: any; }) => {
     reporterMap.set(user.id, user);
   });
 
   // 8. Merge data
-  const finalData = issues.map((issue) => ({
+  const finalData = issues.map((issue: { id: any; title: any; description: any; type: any; status: any; created_at: any; updated_at: any; reporter_id: any; }) => ({
     id: issue.id,
     title: issue.title,
     description: issue.description,
@@ -232,6 +232,7 @@ const deleteIssue = async (id: number) => {
 export const issueService={
  createIssue,
  getAllIssues,
+ getSingleIssue,
  updateIssue,
  deleteIssue
 }
