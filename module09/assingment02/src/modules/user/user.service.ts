@@ -4,10 +4,7 @@ import type { IUser } from "./user.interface";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken"
 
-
-
 const createUserIntoDB = async(payload: IUser) => {
-    // console.log(payload)
     const { name, email, password } = payload;
 
     const hashPassword = bcrypt.hashSync(password, 10);
