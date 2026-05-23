@@ -7,6 +7,7 @@ export const pool = new Pool({
 })
 
 export const initDB = async() => {
+    
     try {
         await pool.query(`
       CREATE TABLE IF NOT EXISTS users(
@@ -15,7 +16,7 @@ export const initDB = async() => {
         email VARCHAR(100) UNIQUE NOT NULL,
         password VARCHAR(255) NOT NULL,
         age INT,
-        role VARCHAR(10) DEFAULT 'user',
+        role VARCHAR(50) DEFAULT 'contributor',
         created_at TIMESTAMP DEFAULT NOW(),
         updated_at TIMESTAMP DEFAULT NOW()
       )
