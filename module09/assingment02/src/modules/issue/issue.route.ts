@@ -1,5 +1,7 @@
 import express from "express";
 import { issueController } from "./issue.controller";
+import auth from "../../middleware/auth";
+import { USER_ROLE } from "../types";
 
 const router = express.Router();
 
