@@ -1,5 +1,5 @@
 import config from "../config";
-import type { NextFunction, Request } from "express";
+import type { NextFunction, Request, Response } from "express";
 import jwt, { type JwtPayload } from "jsonwebtoken";
 import { pool } from "../db";
 // import type { ROLES } from "../modules/types";

@@ -1,18 +1,55 @@
 // JS - TS
-// string, number, boolean, undefinded, null
+// string, number, boolean, undefined, null
 
-// TS: never, unknown, void
+// ts: never, unknown, void
 
-let userName: string = "AShraf Uddin";
+let userName:string = "AShraf Uddin";
 
-let userId:number = 1213;
+// userName = 12; 
 
-userName.toLowerCase()
+let userId = 12312;
 
-let isAdmin:boolean = false;
+// userId = "1232"
 
+let isAdmin = false
 isAdmin = true;
 
-let x:undefined = undefined;
+console.log(isAdmin);
 
+let x = undefined;
+
+x =5;
+x = 3;
+
+// string 
+let name: string = "Ashraf";
+let city: string = "Dhaka";
+
+console.log(name, city);
+
+// boolean
+
+let isStudent: boolean = true;
+let isLoggedIn: boolean = false;
+
+// null > Represents Nothing or  Empty value
+let data: null = null;
+
+console.log(data);
+
+// undefined > Value is not assigned yet
+
+let value: undefined = undefined;
+
+console.log(value);
+
+
+// symbol
+
+// Used for creating unique identifiers
+
+let id: symbol = Symbol("id");
+let id2: symbol = Symbol("id") 
+
+console.log(id === id2); // false (always unique)
 
