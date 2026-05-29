@@ -1,33 +1,36 @@
 // spread operator
 
-const friends = ['Rahim', 'Karim', 'Torim'];
+const friends = ["Rahim", "Karim"];
+const schoolFriends = ["Pintu", "chintu", "bulbul"];
 
-const schoolFriends = ['pintu', 'cindu', 'pindu'];
+const collegeFriends = ["Mr. Smart", "Mr very very smart"];
 
-const collegeFriends = ['Mr. Smart', 'Mr Very very Smart'];
-
+// const friends = ["Rahim", "Karim", ["Pintu", "chintu", "bulbul"]]
 
 friends.push(...schoolFriends);
 friends.push(...collegeFriends)
-
 console.log(friends);
 
-const user = {name: "Mezba", phoneNo:"018882838"};
+const user = {
+    name: "Ashraf",
+    phoneNo: '01818818222',
+}
 
-const otherInfo = {hoppy: 'Outing', favouriteColor: 'Black'};
 
-const userInfo = {...user, ...otherInfo};
+const oterInfo = {
+    hoppy: 'outing',
+    favouriteColor: "Black",
 
+}
+
+const userInfo = {...user, ...oterInfo}
 
 console.log(userInfo);
 
 
-//rest operator
-
-const senInvite = (...friends: string[]) =>{
-    friends.forEach((friend:string) => {
-        console.log(`Send Invitation to ${friend}`)
-    })
+// rest operator
+const sendInvite = (...friends: string[]) => {
+    friends.forEach((friend: string) => console.log(`Send invitation ${friend}`))
 }
 
-senInvite('Pintu', 'Cintu', 'Kolkol', 'chucul')
+sendInvite("Ashraf", "TAnjil", "Nanan")

@@ -3,7 +3,7 @@
 type A = null;
 type B = undefined;
 
-type C = A extends number ? true : B extends undefined ? true : false;
+type C = A extends null ? true : B extends undefined ? true : false;
 
 type RichPeoplesVehicle = {
     bike: string;

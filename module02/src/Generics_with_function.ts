@@ -1,53 +1,54 @@
-// Generic function
+// Generic Function
 
-// const createArrayWithString = (value:string) => [value];
+// const createArrayWithString = (value: string) => [value];
 
 // const createArrayWithNumber = (value: number) => [value];
 
 // const createArrayWithUserObj = (value: {id: number, name: string}) => {
 //     return [value];
-// };
+// }
 
-const createArrayWithGenetic = <T>(value: T) => {
+const createArrayWithGeneric = <T>(value: T) => {
     return [value];
 }
 
-const arrString = createArrayWithGenetic("Apple");
-const arrNum = createArrayWithGenetic(222);
-const arrObj = createArrayWithGenetic({
-    id: 231,
-    name: 'AShra Uddin'
+const arrString = createArrayWithGeneric("Apple");
+const arrNum = createArrayWithGeneric(22);
+const arrObj = createArrayWithGeneric({
+    id: 123,
+    name: "Next Level",
 });
 
-// tuple
-const createArrayWithTuple = (param1: string, param2:number) => [param1, param2];
+// Tuple
 
-const createArrayTupleWithGenetic = <X, Y>(param1:X, param2: Y) => [param1, param2];
+const createArrayWithTuple = (param1: string, param2: string) => [param1, param2];
 
-const res1 = createArrayTupleWithGenetic("Mezba", false);
+const createArrayWithTupleWithGeneric = <X, Y>(param1: X, param2: Y) => [param1, param2];
 
-const res2 = createArrayTupleWithGenetic(222, {name:'AShraf'})
+const res1 = createArrayWithTupleWithGeneric("AShraf", false);
+const res2 = createArrayWithTupleWithGeneric(222, {
+    name: "Ashraf"
+})
 
-// 
 
-const addStudentToCourse = <T>(studentInfo:T) => {
-    return{
-        course:"Next Level",
+const addStudentToCourse = <T>(studentInfo: T) => {
+    return {
+        course: "Next level",
         ...studentInfo,
     }
-}
-
-const student1 = {
-    id: 123, 
-    name: "Mezba",
-    hasPen: true,
 };
 
+const student1 = {
+    id: 123,
+    name: 'MEzba',
+    hasPen: true,
+}
+
 const student2 = {
-    id: 321,
-    name: "Jhankar Mahbub",
+    id: 213,
+    name: "Tanjil Ch",
     hasCar: true,
-    isMarried: true,
+    isMarried: true
 }
 
 const result = addStudentToCourse(student1);
@@ -55,27 +56,20 @@ const result = addStudentToCourse(student1);
 console.log(result);
 
 
-// without generic
 
-// function getString(value: string):string{
-//     return value;
-// }
+const Demo = <T> (information: T) => {
+    return {
+         course: "Next Level Two",
+        ...information
+    }
+}
 
-// function getNumber(value:number):number {
-//     return value;
-// }
-// // 
-// function getValue<T>(value:T): T{
-//     return value;
-// }
 
-// getValue<number>(100);
-// getValue<string>("Ashraf");
+const stIn = {
+    name: "Ashraf Uddin",
+    age: 234
+}
 
-// // Generic Function with array
-// function getFirst<T>(arr:T[]): T {
-//     return arr[0];
-// }
+const result1 = Demo(stIn);
 
-// getFirst<number>([1, 2, 4]);
-// getFirst<string>(["a", "b"]);
+console.log(result1)

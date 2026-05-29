@@ -1,34 +1,32 @@
-type Student = {id: number, name: string, dateOfBrith: string, class: string};
+// constraint : strict rules deya
 
-const addStudentToCourse1 = <T extends Student>(studentInfo:T) => {
-    return{
-        course:"Next Level",
+type Student = {id: number, name: string};
+
+const addStudentToCourse = <T extends Student>(studentInfo: T) => {
+    return {
+        course: "Next level",
         ...studentInfo,
     }
-}
-
-const student01 = {
-    id: 123, 
-    name: "Mezba",
-    hasPen: true,
 };
 
-const student02 = {
-    id: 321,
-    name: "Jhankar Mahbub",
+const student1 = {
+    id: 123,
+    name: 'MEzba',
+    hasPen: true,
+}
+
+const student2 = {
+    id: 213,
+    name: "Tanjil Ch",
     hasCar: true,
-    isMarried: true,
+    isMarried: true
 }
 
-const student03 = {
+const student3 = {
+    id: 232,
+    name: "ASghraf idd",
     hasWatch: true,
-    id: 234,
-    name: 'AShraf Uddin',
-    dateOfBrith: '34',
-    class: 'One'
 }
 
-
-const result1 = addStudentToCourse1(student03);
-
-console.log(result1);
+const result = addStudentToCourse(student3);
+     

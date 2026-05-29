@@ -1,68 +1,40 @@
-// // Dynamic generalize
+// dynamically generalize: Generic
+// const friends: string[] = ["MR. x", "Mr. Y", "Mr. Z"];
 
-// type GenericArray<T> = Array<T>;
+type GenericArray<T> = Array<T>
 
+const friends: GenericArray<string> = ["MR. x", "Mr. Y", "Mr. Z"];
 
+const rollNumbers: GenericArray<number> = [4, 7, 88];
 
-// // const friends: string[] = ['Mr.x', 'Mr. Y', 'Mr.Z']
-
-// const friends1: GenericArray<string> = ["Mr. X", "Mr. Y", "Mr. Z"];
-
-
-// // const rollNumbers:number[] = [4, 3, 55];
-// const rollNumbers:GenericArray<number> = [4, 3, 55];
-
-// const isEligibleList: GenericArray<boolean> = [true, false, true];
-
-// type User1 = {name: string, age: number};
-
-// const userList: GenericArray<User1> = [
-//    {
-//         name: "Mr.X",
-//         age: 22,
-//    },
-//    {
-//         name: "Mr.Y",
-//         age: 22,
-//    },
-//    {
-//         name: "Mr.Z",
-//         age: 22,
-//    },
-// ]
-
-// const sqrFunc = (value:number) => {
-//     return value * value;
-// }
-
-// sqrFunc(33)
-
-// type Coordinates<X, Y> = [X, Y]
-
-// const coordinates1:Coordinates<number, number> = [20, 30];
-// const coordinates2:Coordinates<string, string> = ['20', '30'];
+const isEligibleList: GenericArray<boolean> = [true, false, true];
 
 
-
-// Without Generic
-// same logic repeated
-function getString(value: string): string {
-     return value;
+const sqrFunc = (value: number) => {
+     return value * value;
 }
 
-function getNumber(value: number): number {
-     return value;
+sqrFunc(5) 
+
+
+type Coordinates<X, Y> = [X, Y];
+
+const coordinates1:Coordinates<number, number> = [1, 3];
+const coordinates2:Coordinates<string, string> = ['2', '4'];
+
+
+type User = {
+     name: string; age: number
 }
 
 
-// With Generic
-// T means : Type will be decided later 
-// It is placeholder for type
-
-function getValue<T>(value:T) {
-     return value;
-}
-
-console.log(getValue<string>("Hello"))
-console.log(getValue<number>(33))
-console.log(getValue<{name: string}>({name:"AShraf"}));
+const userList: GenericArray<User> = [
+     {
+          name: 'Mr. x',
+          age: 22,
+     },
+     {
+          name: 'Mr. Y',
+          age: 34
+     },
+]

@@ -1,58 +1,51 @@
 // ? : ternary operator : decision making
-// ?? : nullish coalescing operator
+// ?? : nullish coalescing operator : null or undefiend
 // ?. optional chaining
 
-const userAge = 21;
-
 const biyerJonnoEligible = (age: number) => {
-    // if(userAge >= 21) {
-    //     console.log('You are eligible')
+    // if(age > 21) {
+    //     console.log("You are eligible");
     // } else {
-    //     console.log('You are not eligible')
+    //     console.log("Your are not eligible");
     // }
 
-    const result = age >= 21 ? "You are eligible" : "You are not eligible !";
+    const result = age >= 21 ? 'You are eligible' : 'Your are not eligible';
 
     console.log(result);
-};
+}
 
-biyerJonnoEligible(20)
+biyerJonnoEligible(23)
 
-// ?? : nullish coalescing operator : null / undefiend
+const userTheme = undefined;
 
-const userTheme = null;
+const selectedTheme = userTheme ?? 'Light Theme';
 
-const selectedTheme = userTheme ?? 'Light theme'
+console.log(selectedTheme)
 
-console.log(selectedTheme);
+const isAuthenticated = null;
 
-
-const isAuthenticated = ""
-
-const resultWithTernary = isAuthenticated ? isAuthenticated : "You are guest! ";
-
-const resultWithNulish = isAuthenticated ?? 'You are guest! ';
+const resultWithTernary = isAuthenticated ? isAuthenticated : "You are guest !";
+const resultWithNulish = isAuthenticated ?? "You are guest !";
 
 console.log({resultWithTernary}, {resultWithNulish})
 
-// OPtional chaining
+// optional chaining
 
-const user : {
-    address:{
+const user:{
+    address: {
         city: string;
         town: string;
         postalCode?: string;
     }
 } = {
-    address:{
+    address: {
         city: "Dhaka",
-        town: "Bannani",
-    },
-};
+        town: "Chuarughat",
+        // postalCode: '2323',
+    }
+}
 
-const postalCode = user?.address?.postalCode;
+const postalcode = user?.address.postalCode;
 
-console.log(postalCode)
-
-
+console.log(postalcode);
 

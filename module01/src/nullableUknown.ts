@@ -1,9 +1,10 @@
-//nullable types
+// nullable type
+
 const getUser = (input: string | null) => {
     if(input) {
-        console.log(`From DB: ${input}`)
+        console.log(`From DB: ${input}`);
     } else {
-        console.log('From DB: All User')
+        console.log('From DB: ALL USER');
     }
 }
 
@@ -14,20 +15,23 @@ getUser(null);
 const discountCalculator = (input: unknown) => {
     if(typeof input === 'number') {
         const discountPrice = input * 0.1;
-        console.log(discountPrice)
-    } else if (typeof input === 'string') {
-        const [discountPrice] = input.split(" ")
-        console.log(Number(discountPrice) *0.1);
-    } else{
-        console.log('Worng input')
+        console.log(discountPrice);
+    } else if(typeof input === 'string') {
+        const [discountPrice] = input.split(" ");
+        console.log(Number(discountPrice) * 0.1);
+    } else {
+        console.log("Worng input");
     }
 }
 
 discountCalculator(100);
-discountCalculator('100 tk');
-discountCalculator(null);
+discountCalculator("100 tk");
+discountCalculator(null)
 
-// void 
-const throwError = (msg: string):never =>{
+// void
+
+const throwError = (msg: string): never => {
     throw new Error(msg)
 }
+
+throwError('Error...........')

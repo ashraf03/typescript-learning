@@ -1,53 +1,54 @@
 type User = {
-     id: number,
+    id: number,
     name: {
-        firstName: string,
-        lastName: string,
+        firstName: string;
+        lastName: string;
     }
-    gender: 'male | female',
-    contactNo: string,
-    adress: {
-        division: string,
+    gender: 'male' | 'female';
+    contactNo: string;
+    address: {
+        division: string;
         city: string
     }
 }
 
 
 const user1: User = {
-    id: 1233,
-    name:{
-        firstName: 'Mr.',
-        lastName: 'X',
+    id: 123,
+    name: {
+        firstName: "Md",
+        lastName: "Ashraf",
     },
-     gender: "male",
-    contactNo:'02432',
-    addess: {
-        division: 'Chattogram',
-        city: 'Chattogram'
+    gender: 'male',
+    contactNo: "018247",
+    address: {
+        city: "Sylhet",
+        division: "SYlhet"
     }
 }
 
 const user2: User = {
-    id: 1233,
-    name:{
-        firstName: 'Mr.',
-        lastName: 'Y',
+    id: 123,
+    name: {
+        firstName: "Md",
+        lastName: "Ashraf ud",
     },
-     gender: "female",
-    contactNo:'02352',
-    addess: {
-        division: 'Dhaka',
-        city: 'Dhaka'
+    gender: 'female',
+    contactNo: "35345",
+    address: {
+        city: "Sg",
+        division: "sd"
     }
 }
 
-type isAdmin = true
-const isAdmin : isAdmin = true;
+type IsAdmin = true
+
+const isAdmin:IsAdmin = true
 
 type Name = string;
 
-const myName: Name = "Me . X";
+const myName: Name = "Ashraf Uddin";
 
-type AddFunc =(num1: number, num2: number) => number;
+type AddFun = (num1: number, num2: number) => number;
 
-const add: AddFunc= (num1, num2) => num1 + num2;
+const add:AddFun = (num1, num2) => num1 + num2;

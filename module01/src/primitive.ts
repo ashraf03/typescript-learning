@@ -53,3 +53,25 @@ let id2: symbol = Symbol("id")
 
 console.log(id === id2); // false (always unique)
 
+let AshrafNameAndRoll: [string, number] = ["Mezba", 79]
+let coordinates: [string, number, string] = ["ashrsaf", 232, "tanil"];
+
+console.log(coordinates);
+console.log(AshrafNameAndRoll);
+
+const user: {
+    readonly organizarion: string;  // access modifier
+    // organizarion: "Study shop", //value => type : literal types
+    firstName: string;
+    middleName?: string; //optional type
+    lastName: string;
+    isMarried : boolean;
+} = {
+    organizarion: "Study shop",
+    firstName: "Ashraf Uddin",
+    // middleName: "Chowdhury",
+    lastName: "Tanjil",
+    isMarried : false,
+}
+
+// user.organizarion = "Study Shop 1"

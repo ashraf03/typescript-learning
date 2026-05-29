@@ -1,17 +1,20 @@
 // union |
-// 
 
-type UserRole = 'admin' | 'user'
+type UserRole = 'admin' | 'user';
 
-const getDashboard = (role: UserRole) => {
+const getDashBoard = (role: UserRole) => {
     if(role === 'admin') {
-        return "Admin Dashboard";
-    } else if (role === 'user') {
-        return "User dashboard";
-    } 
+        return 'Admin Dashboard'
+    }
+    else if(role === 'user') {
+        return "User dashboard"
+    }
+    else {
+        return 'guest dasboard'
+    }
 }
 
-console.log(getDashboard('admin'))
+getDashBoard('admin')
 
 // intersection &
 
@@ -19,19 +22,19 @@ type Employee = {
     id: string;
     name: string;
     phoneNo: string;
-}
+};
 
 type Manager = {
-    designation : string;
-    teamSize: number
+    desgnation: string;
+    teamSize : number;
 }
 
 type EmployeeManager = Employee & Manager;
 
 const ChowdhuryShaheb: EmployeeManager = {
-    id: '12213',
-    name: 'AShraf',
-    phoneNo: '0188',
-    designation: 'manager',
-    teamSize: 20
+    id: '23123',
+    name : "Md Ch",
+    phoneNo: '122132134',
+    desgnation: 'manager',
+    teamSize: 232
 }
