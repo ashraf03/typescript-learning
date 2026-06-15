@@ -1,55 +1,43 @@
-class Parent {
-    name: string; //common
-    age: number;  //common
+class Student {
+    name: string;
+    age: number;
     address: string;
 
-    constructor(name: string, age:number, address: string) {
+    constructor(name: string, age: number, address:string) {
         this.name = name;
         this.age = age;
         this.address = address;
     }
 
-    getSleep(numberOfHours:number) {
-        console.log(`${this.name} Eni  ${numberOfHours} ghonta gomai`)
+    getSleep(numOfHours:number) {
+        console.log(`${this.name} eto ghonta ${numOfHours} ghumai`);
     }
 }
 
-class Student extends Parent{
-    rollNo: number;
+const student1 = new Student(`Mr. fakibazz`, 18, "Bangladesh");
 
-    constructor(name: string, age: number, address:string, rollNo:number) {
-        super(name, age, address);
-        this.rollNo = rollNo;
-    }
-}
+student1.getSleep(15);
 
-const student1 = new Student('Mr. fakibaaz', 18, 'Bangladesh', 5464);
-
-console.log(student1)
-console.log(student1.getSleep(15))
-
-class Teacher extends Parent{
+class Teacher extends Student {
     designation: string; //extra property
-    constructor(name: string, age:number, address: string, designation:string) {
-        super(name, age, address);
+
+    constructor(name:string, age:number, address: string, designation: string) {
+        super(name, age, address)
         this.designation = designation;
     }
 
-    //own method
-    takeClass(numberOfClass:number) {
-        console.log(`${this.name} ${numberOfClass} ghonta class nai`)
+    takeClass(numOfClass: number) {
+        console.log(`${this.name} eto ghonta class ${numOfClass} nei`);
     }
-
 }
 
 
 const teacher1 = new Teacher(
     "Mr. Smart Teacher",
-    25,
-    "BAngladesh",
-    "Senior teacher"
-)
+    25, 
+    "Bangladesh",
+    "senior teacher"
+);
 
-teacher1.takeClass(4)
+teacher1.takeClass(4);
 
-teacher1.address
